@@ -1,12 +1,12 @@
-Microsoft Graph
+Edmodo API
 ----------
 
-A Meteor library to interact with Microsoft Graph (ported from percolate:google-api).
+A Meteor library to interact with Edmodo API (ported from percolate:google-api).
 
 # Install
 
 ```
-meteor add classcraft:microsoft-graph
+meteor add classcraft:edmodo-api
 ```
 
 # Usage
@@ -14,17 +14,17 @@ meteor add classcraft:microsoft-graph
 To call the library, use the `get()` and `post()` functions:
 
 ```
-MicrosoftGraph.get('/your/api/path', options[, callback]);
+EdmodoApi.get('/your/api/path', options[, callback]);
 ```
 
 If `callback` is provided (client or server), the call will be made **asynchronously**.
 
-Available methods: `MicrosoftGraph.get`, `MicrosoftGraph.post`, `MicrosoftGraph.patch`, `MicrosoftGraph.put`, `MicrosoftGraph.delete`
+Available methods: `EdmodoApi.get`, `EdmodoApi.post`, `EdmodoApi.patch`, `EdmodoApi.put`, `EdmodoApi.delete`
 
-`MicrosoftGraph` is a Microsoft Graph OAuth authentication wrapper around [`HTTP`](http://docs.meteor.com/#/full/http), so it takes the same arguments. For example, to pass a JSON body in `MicrosoftGraph.post`, use:
+`EdmodoApi` is a Microsoft Graph OAuth authentication wrapper around [`HTTP`](http://docs.meteor.com/#/full/http), so it takes the same arguments. For example, to pass a JSON body in `EdmodoApi.post`, use:
 
 ````javascript
-MicrosoftGraph.post('/your/api/path', { data: jsonBody });
+EdmodoApi.post('/your/api/path', { data: jsonBody });
 ````
 
 On the client, if you do not provide a callback, the library will return a [Q promise](https://github.com/kriskowal/q). On the server, it will run **synchronously**.
